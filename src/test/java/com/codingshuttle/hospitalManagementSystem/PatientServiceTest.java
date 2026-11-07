@@ -48,7 +48,7 @@ public class PatientServiceTest {
       //  int rowsAffected=patientRepository.updatePatientNameWithId("Abhijit kumar", 1L);
       //  System.out.println(rowsAffected);
 
-        //Patient patient=new Patient();
+       // Patient patient=new Patient();
        // patientRepository.save(patient);
 
 
