@@ -9,6 +9,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -35,4 +37,11 @@ public class Patient {
     @CreationTimestamp
     @Column(name = "created_at", nullable = true)
     private LocalDateTime createdAt;
+
+    @OneToOne
+    @JoinColumn(name = "patient_insurance", unique = true)
+    private Insurance insurance; //owning side
+
+    @OneToMany(mappedBy = "patient")
+    private Set<Appointment> appointments =new HashSet<>(); //inverse side
 }
