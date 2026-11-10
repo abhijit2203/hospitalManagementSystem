@@ -43,8 +43,8 @@ public class PatientServiceTest {
 //            System.out.println(p);
 //        }
 
-        int rowsAffected=patientRepository.updatePatientNameWithId("Abhijit kumar", 1L);
-        System.out.println(rowsAffected);
+       // int rowsAffected=patientRepository.updatePatientNameWithId("Abhijit kumar", 1L);
+      //  System.out.println(rowsAffected);
       //  int rowsAffected=patientRepository.updatePatientNameWithId("Abhijit kumar", 1L);
       //  System.out.println(rowsAffected);
 
@@ -52,7 +52,12 @@ public class PatientServiceTest {
        // patientRepository.save(patient);
 
 
-        patientService.testPatientTransaction();
+       // patientService.testPatientTransaction();
+
+        List<Patient> patientList=patientRepository.getAllPatientsWithAppointments();
+        for(var p: patientList){
+            System.out.println(p);
+        }
 
     }
 }
